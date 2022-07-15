@@ -14,17 +14,32 @@
 </head>
 
 <body>
-    <header>
-        <nav class="p-3">
+    <header class="position-sticky top-0">
+        <nav class="pt-3">
             <ul class="d-flex justify-content-between">
-                <li id="home-route" data-route="true">Home</li>
+                <li>
+                    <a id="home-route" data-route="true" data-click="false" href="#home">Home</a>
+                </li>
                 <ul class="d-flex flex-row">
-                    <li id="about-route" data-route="true">About</li>
-                    <li id="gallery-route" data-route="true">Gallery</li>
+                    <li><a id="about-route" data-route="true" data-click="false" href="#about">About</a></li>
+                    <li><a id="gallery-route" data-route="true" data-click="false" href="#gallery">Gallery</a></li>
                 </ul>
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section id="home" data-big-section="true">
+        </section>
+        <section id="about" data-big-section="true">
+            
+        </section>
+        <section id="gallery" data-big-section="true">
+            
+        </section>
+    </main>
+
+    <script src="./script/index.js"></script>
 </body>
 
 </html>

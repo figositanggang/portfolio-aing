@@ -8,15 +8,51 @@
     -moz-transition: .25s all;
     -ms-transition: .25s all;
     -o-transition: .25s all;
+    scroll-behavior: smooth;
 }
 
-ul, ul li {
+a {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+::after, ::before {
+    transition: all .25s;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+}
+
+ul, li {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 [data-route=true] {
-    padding: 1em 2em;
+    padding: .25rem .5rem;
+    margin-right: .25em;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+}
+@media screen and (min-width: 400px) {
+    [data-route=true]::before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 0%;
+        background: #000;
+        bottom: 0;
+        left: 50%;
+    }
+    [data-route=true]:hover::before{
+        width: 100%;
+        left: 0;
+    }
 }
 
+[data-big-section=true] {
+    min-height: 100vh;
+}
