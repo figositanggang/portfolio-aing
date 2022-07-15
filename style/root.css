@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    transition: .25s all;
+    -webkit-transition: .25s all;
+    -moz-transition: .25s all;
+    -ms-transition: .25s all;
+    -o-transition: .25s all;
+}
+
+ul, ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+[data-route=true] {
+    padding: 1em 2em;
+}
+
